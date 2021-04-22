@@ -1,0 +1,29 @@
+/mobile/brands
+    get=list all brands
+    post=create new brand
+/mobile/edit/id
+    get=fetch that brand
+    post=update that brand
+/mobile/delete/id
+    post=delete that brand
+=================================
+/mobile/mobiles
+    get=list all mobiles
+    post=create new mobiles
+
+/mobile/mobiles/detail/id
+    get=detail of mobile with that id
+
+user authentication
+    mobile/userRegistration
+
+user login
+    mobiles/userlogin
+    =authenticate user and log in
+user logout
+    mobiles/userlogout
+
+========================
+Orders
+mobile/orders
+    list the

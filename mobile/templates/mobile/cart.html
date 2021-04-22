@@ -1,0 +1,42 @@
+<!doctype html>
+{%extends 'mobile/base.html'%}
+
+{%block body_block%}
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h2 class="headcart"><b>CART</b></h2>
+
+{% for order in orders%}
+<table class="table pos">
+                <tr>
+                    <td><B>Image</B></td>
+                    <td><B>Product</B></td>
+                    <td><b>User</b></td>
+                <td><b>Status</b></td>
+                    <td><B>Address</B></td>
+                    <td><b>Price</b></td>
+                    <td><b>Cancel</b></td>
+<!--                    <td><b>Option2</b></td>-->
+                </tr>
+
+                <tr>
+                    <td><img src="{{order.product.img.url}}" alt="" height="80px"></td>
+                    <td>{{order.product}}</td>
+                    <td>{{order.user}}</td>
+                    <td>{{order.status}}</td>
+                     <td>{{order.product.price}}</td>
+                    <td>{{order.address}}</td>
+
+<td><a href="{%url 'cancel' order.id%}" class="btn btn-danger">Cancel</a></td>
+<!--                    <td><a href="{%url 'vieworder' order.id%}" class="btn btn-primary">View</a></td>-->
+
+
+                </tr>
+            </table>
+            {% endfor%}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}
+
+{%block body_block%}
+<h1>Edit brands</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+<form action="" method="post">
+    {%csrf_token%}
+    <table>
+    {{form.as_table}}
+    </table>
+<input type="submit" value="create" class="but btn btn-success">
+</form>
+        </div>
+    </div>
+</div>
+{% endblock %}

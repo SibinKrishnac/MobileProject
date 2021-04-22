@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="logimg">
+{%extends 'mobile/base.html'%}
+
+{%block body_block%}
+
+<div class="container">
+    <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <h2 style="position: relative;
+  left: 80px;top:150px; color:#00688B	;"><B>LOGIN</B></h2>
+
+ <div class="white">
+     <p style ="position: relative;
+  top: 150px;left: 0px;color:#726b75;">Login here to access the Mobile store..!!</p>
+
+<form action="" method="post" style="position: relative;
+  left: 50px;top:150px">
+    {%csrf_token%}
+    <table class="logintable">
+        <tr>
+    <td><input type="text" name="uname" placeholder="Enter Username"></td></tr>
+<tr><td><input type="password" name="pwd" placeholder="Enter Password"></td>
+        </tr>
+        </table>
+    <input type="submit" value="Login" class="btn btn-primary buttn">
+    </form></div>
+    </div>
+
+        <div class="col-4"> </div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
